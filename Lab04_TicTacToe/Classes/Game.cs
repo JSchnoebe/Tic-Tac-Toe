@@ -31,6 +31,18 @@ namespace Lab04_TicTacToe.Classes
 		public Player Play()
 		{
 
+
+			
+
+			for (int i = 0; i < 9; i++)
+			{
+				Player newPlayer = NextPlayer();
+				newPlayer.TakeTurn(Board);
+				SwitchPlayer();
+				Board.DisplayBoard();
+			}
+			return PlayerOne;
+
 			//TODO: Complete this method and utilize the rest of the class structure to play the game.
 
 			/*
@@ -47,7 +59,6 @@ namespace Lab04_TicTacToe.Classes
 
             Use any and all pre-existing methods in this program to help construct the method logic. 
              */
-			return PlayerOne;
 		}
 
 
