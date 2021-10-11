@@ -40,8 +40,12 @@ namespace Lab04_TicTacToe.Classes
 				newPlayer.TakeTurn(Board);
 				SwitchPlayer();
 				Board.DisplayBoard();
+				if (CheckForWinner(Board))
+                {
+					return newPlayer;
+                }
 			}
-			return PlayerOne;
+			return null;
 
 			//TODO: Complete this method and utilize the rest of the class structure to play the game.
 
@@ -94,11 +98,11 @@ namespace Lab04_TicTacToe.Classes
 				string b = Board.GameBoard[p2.Row, p2.Column];
 				string c = Board.GameBoard[p3.Row, p3.Column];
 
+				if (a == b && b == c)
+					return true;
 				// TODO:  Determine a winner has been reached. 
 				// return true if a winner has been reached. 
-			
 			}
-
 			return false;
 		}
 
