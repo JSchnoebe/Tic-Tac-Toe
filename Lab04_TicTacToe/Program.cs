@@ -41,9 +41,14 @@ namespace Lab04_TicTacToe
 
 
             Player winner = game.Play();
-
-            Console.WriteLine($"Congratulations {winner.Name}, you win!!");
-
+            if (winner == null)
+            {
+                Console.WriteLine("It's a tie!");
+            }
+            else
+            {
+                Console.WriteLine($"Congratulations {winner.Name}, you win!!");
+            }
 
 
             // TODO: Setup your game. Create a new method that creates your players and instantiates the game class. Call that method in your Main method.
